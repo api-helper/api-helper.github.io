@@ -2,5 +2,6 @@
   const match = params.get('match');
   const collection = params.get('collection').split(',');
   const index = collection.findIndex(item => item.includes(match));
+  alert(index);
   return index;
 </script>
