@@ -1,4 +1,5 @@
 <script>
+  const params = new URLSearchParams(this.location);
   const match = params.get('match');
   const collection = params.get('collection').split(',');
   const index = collection.findIndex(item => item.includes(match));
