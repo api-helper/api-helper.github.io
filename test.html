@@ -1,8 +1,16 @@
-<body></body>
-<script type="text/javascript">
-  const params = new URLSearchParams(window.location.search);
-  const match = params.get('match');
-  const collection = params.get('collection').split(',');
-  const index = collection.findIndex(item => item.includes(match));
-  document.onload = () => { alert(); document.body.innerText = index; }
-</script>
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <div id="results"></div>
+    <script type="text/javascript">
+      const output = document.getElementById("results");
+      const params = new URLSearchParams(window.location.search);
+      const match = params.get('match');
+      const collection = params.get('collection').split(',');
+      const result = collection.findIndex(item => item.includes(match));
+      output.textContent = result;
+    </script>
+  </body>
+</html>
